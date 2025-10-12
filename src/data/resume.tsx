@@ -5,17 +5,18 @@ import { HomeIcon, NotebookIcon, ThumbsDown, VideoIcon, FolderIcon } from "lucid
 import { title } from "process";
 
 export const DATA = {
-  name: "Prasenjit Nayak",
+  name: "Abhishek Biradar",
   initials: "PN",
-  url: "https://github.com/StarKnightt/prasendev",
-  location: "Odisha, India",
-  locationLink: "https://www.google.com/maps/place/odisha",
+  url: "https://github.com/seekernothing",
+  location: "Pune, India",
+  locationLink: "https://www.google.com/maps/place/pune",
   description:
     "A Full Stack Developer from India, Code is an art 🎨 be the artist!",
   summary:
-    "Hello! I'm a developer from Odisha, India. I enjoy programming and exploring technology. Currently doing **freelancing** and working on my own projects. Open to work, freelance, or **collaborate**.\n\nI'm actively working on [open-source projects](https://github.com/StarKnightt).",
+    "Hello! I'm a developer from Pune, India. I enjoy programming and exploring technology. Currently doing **freelancing** and working on my own projects. Open to work, freelance, or **collaborate**.\n\nI'm actively working on [open-source projects](https://github.com/StarKnightt).",
 
-  avatarUrl: "/hi.webp",
+  // point to the existing image under public/images/products/hi.jpg
+  avatarUrl: "/images/products/hi.jpg",
   skills: [
     "React",
     "Next.js",
@@ -32,67 +33,74 @@ export const DATA = {
   videos: [
     {
       title: "Track Your Coding time for free",
-      description: "Learn how to track your code time with complete analytics and insights.",
+      description:
+        "Learn how to track your code time with complete analytics and insights.",
       thumbnail: "/video1.avif",
       url: "https://youtu.be/tBatfQjWxCg?si=sy2vZbCHoIYNME-3",
-      date: "2024-05-15"
+      date: "2024-05-15",
     },
     {
       title: "Fix multi-cursor in VS Code",
       description: "Simple trick to fix multi-cursor in VS Code.",
       thumbnail: "/video2.avif",
       url: "https://youtu.be/E9h7M6ZK_tA?si=ykzV7ARU4VMnbBRo",
-      date: "2024-07-01"
+      date: "2024-07-01",
     },
     {
-     title: "Twitter(X)'s monetization (Hindi)",
-     description: "Is the policy broken? Let's find out.",
-     thumbnail: "/video3.avif",
-     url: "https://youtu.be/Z3h1jt6jKLY?si=blL4l4FNco9WW9FT",
-     date: "2024-11-04"
+      title: "Twitter(X)'s monetization (Hindi)",
+      description: "Is the policy broken? Let's find out.",
+      thumbnail: "/video3.avif",
+      url: "https://youtu.be/Z3h1jt6jKLY?si=blL4l4FNco9WW9FT",
+      date: "2024-11-04",
     },
     {
-      title:"How to fix any kind of ban in twitter (Hindi)",
+      title: "How to fix any kind of ban in twitter (Hindi)",
       description: "Learn how to fix any kind of ban in twitter.",
       thumbnail: "/video4.avif",
-      url:"https://youtu.be/P7JRFrcXlQU",
-      date: "2024-12-24"
+      url: "https://youtu.be/P7JRFrcXlQU",
+      date: "2024-12-24",
     },
     {
-      title:"Microsoft's new shocking move (Hindi)",
-      description: "GitHub Copilot is now free for everyone, let's see what's the catch.",
+      title: "Microsoft's new shocking move (Hindi)",
+      description:
+        "GitHub Copilot is now free for everyone, let's see what's the catch.",
       thumbnail: "/video5.avif",
-      url:"https://www.youtube.com/watch?v=uIJOUe8T3_I",
-      date: "2024-12-19"
+      url: "https://www.youtube.com/watch?v=uIJOUe8T3_I",
+      date: "2024-12-19",
     },
     {
-      title:"How to run DeepSeek R1 model locally (Hindi)",
-      description:"Learn how to run DeepSeek R1 model locally, in easy steps",
+      title: "How to run DeepSeek R1 model locally (Hindi)",
+      description: "Learn how to run DeepSeek R1 model locally, in easy steps",
       thumbnail: "/video6.avif",
-      url:"https://youtu.be/BgB2pW6QgVg",
-      date: "2025-01-29"
+      url: "https://youtu.be/BgB2pW6QgVg",
+      date: "2025-01-29",
     },
     {
-      title:"How to do zoom in and out video recording in Windows for free. (Hindi)",
-      description:"Learn how to do zoom in and out video recording in Windows for free.",
+      title:
+        "How to do zoom in and out video recording in Windows for free. (Hindi)",
+      description:
+        "Learn how to do zoom in and out video recording in Windows for free.",
       thumbnail: "/video7.avif",
-      url:"https://youtu.be/WziGdEiT9fE",
-      date: "2025-03-16"
+      url: "https://youtu.be/WziGdEiT9fE",
+      date: "2025-03-16",
     },
     {
-      title:"I Finally Got My FIRST PC!",
-      description: "In this video I talked about my first PC, overall experience was really good, I also talked about the components that I used in the PC in details as well as why to use them and why not.",
+      title: "I Finally Got My FIRST PC!",
+      description:
+        "In this video I talked about my first PC, overall experience was really good, I also talked about the components that I used in the PC in details as well as why to use them and why not.",
       thumbnail: "/video8.avif",
-      url:"https://youtu.be/vHTbqgmB2U8",
-      date: "2025-05-06"
+      url: "https://youtu.be/vHTbqgmB2U8",
+      date: "2025-05-06",
     },
     {
-      title:"How to Get Free Subscriptions for Notion, Cursor, Google, Perplexity & Free Domain Names (Hindi)",
-      description: "In this video I talked about how to get free subscriptions for Notion, Cursor, Google, Perplexity & Free Domain Names.",
+      title:
+        "How to Get Free Subscriptions for Notion, Cursor, Google, Perplexity & Free Domain Names (Hindi)",
+      description:
+        "In this video I talked about how to get free subscriptions for Notion, Cursor, Google, Perplexity & Free Domain Names.",
       thumbnail: "/video9.avif",
-      url:"https://youtu.be/0Up-SjeSwI0",
-      date: "2025-08-27"
-    }
+      url: "https://youtu.be/0Up-SjeSwI0",
+      date: "2025-08-27",
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -281,7 +289,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/68011ca73ab3a7b826bbfac0/download.mp4",
+      video:
+        "https://video.gumlet.io/6745e593080b60408ca085f7/68011ca73ab3a7b826bbfac0/download.mp4",
     },
     {
       title: "Wallpaperz",
@@ -314,7 +323,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/67d5057eefcecbdea7560e35/download.mp4",
+      video:
+        "https://video.gumlet.io/6745e593080b60408ca085f7/67d5057eefcecbdea7560e35/download.mp4",
     },
     {
       title: "3D Carousel Gallery",
@@ -376,7 +386,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6745ec82c84c6b7e105c3ee5/download.mp4",
+      video:
+        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ec82c84c6b7e105c3ee5/download.mp4",
     },
     {
       title: "Solar System",
@@ -433,7 +444,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6745ea2d080b60408ca0bc08/download.mp4",
+      video:
+        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ea2d080b60408ca0bc08/download.mp4",
     },
     {
       title: "Resume Builder",
@@ -463,11 +475,11 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      
+
       image: "",
       video:
         "https://video.gumlet.io/6745e593080b60408ca085f7/6745e5e5080b60408ca08984/download.mp4",
-    }
+    },
   ],
   hackathons: [
     {
@@ -476,8 +488,7 @@ export const DATA = {
       location: "Bhubaneswar, India",
       description:
         "Developed a learing portal with some free education content with the best paid contents too, the project was called as 'EducationX'.",
-      image:
-        "/smart-india-hackathon.webp",
+      image: "/smart-india-hackathon.webp",
       mlh: "https://github.com/Synchrotek/E-LearningX",
       links: [],
     },
@@ -487,8 +498,7 @@ export const DATA = {
       location: "Bhubaneswar, India",
       description:
         "Developed A collaborative coding web platform that enables Multiuser collboration on a coding project in real-time with features of group chat, to-do lists.",
-      image:
-        "/logo.webp",
+      image: "/logo.webp",
       mlh: "https://nexuslink01v.netlify.app/",
       links: [],
     },
