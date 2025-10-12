@@ -45,15 +45,76 @@ export function GithubContributions() {
         transition={{ duration: 0.5 }}
       >
         <div className="p-4 hover:scale-[1.02] transition-transform duration-300">
-          <GitHubCalendar
+          <GitHubCalendarErrorBoundary
             username="seekernothing"
-            colorScheme={resolvedTheme as "light" | "dark"}
-            fontSize={12}
-            blockSize={12}
-            blockMargin={4}
+            resolvedTheme={resolvedTheme}
           />
         </div>
       </motion.div>
     </div>
   );
+}
+
+// Simple Error Boundary wrapper that renders GitHubCalendar and falls back on error
+function GitHubCalendarErrorBoundary({
+  username,
+  resolvedTheme,
+}: {
+  username: string;
+  resolvedTheme: string | undefined;
+}) {
+  const [hasError, setHasError] = React.useState(false);
+  const [retryKey, setRetryKey] = React.useState(0);
+
+  if (hasError) {
+    return (
+      <div className="rounded-md border border-muted p-4 text-sm bg-muted/50">
+        <div className="font-medium">GitHub Contributions</div>
+        <div className="text-muted-foreground mt-2">
+          Could not load contribution data for "{username}".
+        </div>
+        <div className="mt-3 flex gap-2">
+          <a
+            href={`https://github.com/${username}`}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm underline"
+          >
+            Open GitHub Profile
+          </a>
+          <button
+            onClick={() => {
+              setHasError(false);
+              setRetryKey((k) => k + 1);
+            }}
+            className="text-sm underline"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Render inside try/catch using a key to re-mount on retry
+  try {
+    return (
+      <React.Fragment key={retryKey}>
+        <GitHubCalendar
+          username={username}
+          colorScheme={resolvedTheme as "light" | "dark"}
+          fontSize={12}
+          blockSize={12}
+          blockMargin={4}
+        />
+      </React.Fragment>
+    );
+  } catch (e) {
+    // If the library throws synchronously, catch and show fallback
+    // Log error for debugging
+    // eslint-disable-next-line no-console
+    console.error("GitHubCalendar render error:", e);
+    setHasError(true);
+    return null;
+  }
 }
