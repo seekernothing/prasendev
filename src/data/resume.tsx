@@ -1,7 +1,13 @@
 import { Icons } from "@/components/icons";
 import { Description } from "@radix-ui/react-dialog";
 import { url } from "inspector";
-import { HomeIcon, NotebookIcon, ThumbsDown, VideoIcon, FolderIcon } from "lucide-react";
+import {
+  HomeIcon,
+  NotebookIcon,
+  ThumbsDown,
+  VideoIcon,
+  FolderIcon,
+} from "lucide-react";
 import { title } from "process";
 
 export const DATA = {
@@ -30,84 +36,12 @@ export const DATA = {
     "RestAPI",
     "AI API",
   ],
-  videos: [
-    {
-      title: "Track Your Coding time for free",
-      description:
-        "Learn how to track your code time with complete analytics and insights.",
-      thumbnail: "/video1.avif",
-      url: "https://youtu.be/tBatfQjWxCg?si=sy2vZbCHoIYNME-3",
-      date: "2024-05-15",
-    },
-    {
-      title: "Fix multi-cursor in VS Code",
-      description: "Simple trick to fix multi-cursor in VS Code.",
-      thumbnail: "/video2.avif",
-      url: "https://youtu.be/E9h7M6ZK_tA?si=ykzV7ARU4VMnbBRo",
-      date: "2024-07-01",
-    },
-    {
-      title: "Twitter(X)'s monetization (Hindi)",
-      description: "Is the policy broken? Let's find out.",
-      thumbnail: "/video3.avif",
-      url: "https://youtu.be/Z3h1jt6jKLY?si=blL4l4FNco9WW9FT",
-      date: "2024-11-04",
-    },
-    {
-      title: "How to fix any kind of ban in twitter (Hindi)",
-      description: "Learn how to fix any kind of ban in twitter.",
-      thumbnail: "/video4.avif",
-      url: "https://youtu.be/P7JRFrcXlQU",
-      date: "2024-12-24",
-    },
-    {
-      title: "Microsoft's new shocking move (Hindi)",
-      description:
-        "GitHub Copilot is now free for everyone, let's see what's the catch.",
-      thumbnail: "/video5.avif",
-      url: "https://www.youtube.com/watch?v=uIJOUe8T3_I",
-      date: "2024-12-19",
-    },
-    {
-      title: "How to run DeepSeek R1 model locally (Hindi)",
-      description: "Learn how to run DeepSeek R1 model locally, in easy steps",
-      thumbnail: "/video6.avif",
-      url: "https://youtu.be/BgB2pW6QgVg",
-      date: "2025-01-29",
-    },
-    {
-      title:
-        "How to do zoom in and out video recording in Windows for free. (Hindi)",
-      description:
-        "Learn how to do zoom in and out video recording in Windows for free.",
-      thumbnail: "/video7.avif",
-      url: "https://youtu.be/WziGdEiT9fE",
-      date: "2025-03-16",
-    },
-    {
-      title: "I Finally Got My FIRST PC!",
-      description:
-        "In this video I talked about my first PC, overall experience was really good, I also talked about the components that I used in the PC in details as well as why to use them and why not.",
-      thumbnail: "/video8.avif",
-      url: "https://youtu.be/vHTbqgmB2U8",
-      date: "2025-05-06",
-    },
-    {
-      title:
-        "How to Get Free Subscriptions for Notion, Cursor, Google, Perplexity & Free Domain Names (Hindi)",
-      description:
-        "In this video I talked about how to get free subscriptions for Notion, Cursor, Google, Perplexity & Free Domain Names.",
-      thumbnail: "/video9.avif",
-      url: "https://youtu.be/0Up-SjeSwI0",
-      date: "2025-08-27",
-    },
-  ],
+  // videos removed — section deprecated
+  videos: [],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
-    { href: "/videos", icon: VideoIcon, label: "Videos" },
     { href: "/projects", icon: FolderIcon, label: "Projects" },
-    { href: "/gadgets", icon: Icons.shop, label: "Gadgets" },
   ],
   contact: {
     email: "prasen.nayak@hotmail.com",
