@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://prasen.dev/sitemap.xml
+Sitemap: https://seekernothing.com/sitemap.xml
 
 # Assets
 Allow: /favicons/

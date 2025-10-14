@@ -27,16 +27,19 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwi
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/StarKnightt/prasendev
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -120,6 +123,7 @@ npm run lint
 ## 📱 Progressive Web App
 
 This website is PWA-ready with:
+
 - Service Worker support
 - Offline functionality
 - Install prompt
@@ -141,7 +145,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [![Star History Chart](https://api.star-history.com/svg?repos=StarKnightt/prasendev&type=Date)](https://www.star-history.com/#StarKnightt/prasendev&Date)
 
-
 ## 🙏 Acknowledgments
 
 - [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
@@ -153,4 +156,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@Prasenjit](https://twitter.com/Star_Knight12)
 
-Project Link: [Try it here](https://prasen.dev)
+Project Link: [Try it here](https://seekernothing.com)

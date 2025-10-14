@@ -4,7 +4,7 @@ import { DATA } from "@/data/resume";
 import fs from "fs";
 import path from "path";
 
-const baseUrl = "https://prasen.dev";
+const baseUrl = "https://seekernothing.com";
 
 export const revalidate = 86400; // Revalidate once per day
 

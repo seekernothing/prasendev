@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -9,7 +9,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { PersonSchema } from "@/components/schema/person-schema";
-import { Metadata } from 'next';
+import { Metadata } from "next";
 import { Icons } from "@/components/icons";
 import ShinyButton from "@/components/ui/shiny-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -31,43 +31,58 @@ export const metadata: Metadata = {
     siteName: DATA.name,
     images: [
       {
-        url: 'https://prasen.dev/portfolio.png',
+        url: "https://seekernothing.com/portfolio.png",
         width: 1200,
         height: 630,
         alt: `${DATA.name}'s Portfolio`,
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: DATA.name,
     description: DATA.summary,
-    creator: '@' + 'Star_Knight12',
-    images: ['https://prasen.dev/portfolio.png'],
+    creator: "@" + "Star_Knight12",
+    images: ["https://seekernothing.com/portfolio.png"],
   },
 };
 
-const BlogCard = dynamic(() => import("@/components/blog-card").then(mod => mod.BlogCard), {
-  ssr: true,
-  loading: () => <BlogSkeleton />
-});
+const BlogCard = dynamic(
+  () => import("@/components/blog-card").then((mod) => mod.BlogCard),
+  {
+    ssr: true,
+    loading: () => <BlogSkeleton />,
+  }
+);
 
-const GithubContributions = dynamic(() => import("@/components/github-calendar").then(mod => mod.GithubContributions), {
-  ssr: false,
-  loading: () => <GithubSkeleton />
-});
+const GithubContributions = dynamic(
+  () =>
+    import("@/components/github-calendar").then(
+      (mod) => mod.GithubContributions
+    ),
+  {
+    ssr: false,
+    loading: () => <GithubSkeleton />,
+  }
+);
 
-const ProjectCardDynamic = dynamic(() => import("@/components/project-card").then(mod => mod.ProjectCard), {
-  ssr: true,
-  loading: () => <ProjectSkeleton />
-});
+const ProjectCardDynamic = dynamic(
+  () => import("@/components/project-card").then((mod) => mod.ProjectCard),
+  {
+    ssr: true,
+    loading: () => <ProjectSkeleton />,
+  }
+);
 
-const HackathonCardDynamic = dynamic(() => import("@/components/hackathon-card").then(mod => mod.HackathonCard), {
-  ssr: true,
-  loading: () => <HackathonSkeleton />
-});
+const HackathonCardDynamic = dynamic(
+  () => import("@/components/hackathon-card").then((mod) => mod.HackathonCard),
+  {
+    ssr: true,
+    loading: () => <HackathonSkeleton />,
+  }
+);
 
 export default function Page() {
   return (
