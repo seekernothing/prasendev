@@ -8,7 +8,7 @@ export function PersonSchema() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          name: "Prasenjit Nayak",
+          name: "Abhishek Biradar",
           alternateName: ["Prasen", "Star Knight"],
           description: DATA.description,
           image: `${DATA.url}/me.png`,
@@ -17,26 +17,25 @@ export function PersonSchema() {
             DATA.contact.social.GitHub.url,
             DATA.contact.social.LinkedIn.url,
             DATA.contact.social.X.url,
-            DATA.contact.social.X.url
-           
+            DATA.contact.social.X.url,
           ],
           jobTitle: "Full Stack Developer",
           worksFor: {
             "@type": "Organization",
-            name: "Freelance"
+            name: "Freelance",
           },
           alumniOf: {
             "@type": "CollegeOrUniversity",
-            name: "Trident Academy Of Technology"
+            name: "Trident Academy Of Technology",
           },
           address: {
             "@type": "PostalAddress",
             addressLocality: "Odisha",
-            addressCountry: "India"
+            addressCountry: "India",
           },
           email: DATA.contact.email,
-          knowsAbout: DATA.skills
-        })
+          knowsAbout: DATA.skills,
+        }),
       }}
     />
   );

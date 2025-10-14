@@ -1,5 +1,5 @@
 {
-  "name": "Prasenjit Nayak",
+  "name": "Abhishek Biradar",
   "short_name": "prasen.dev",
   "icons": [
     {
@@ -8,7 +8,7 @@
       "type": "image/png"
     },
     {
-      "src": "/favicons/android-chrome-512x512.png", 
+      "src": "/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

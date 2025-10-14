@@ -11,7 +11,7 @@ import { ScrollProgress } from "@/components/scroll-progress";
 import { JsonLd } from "@/components/json-ld";
 import { PageBackground } from "@/components/page-background";
 import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const fontSans = FontSans({
@@ -22,22 +22,33 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "Prasenjit Nayak | Full Stack Developer",
-    template: `%s | Prasenjit Nayak`,
+    default: "Abhishek Biradar | Full Stack Developer",
+    template: `%s | Abhishek Biradar`,
   },
-  description: "Prasenjit Nayak is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
-  keywords: ["Prasenjit Nayak", "Full Stack Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Node.js Developer", "Web Developer India", "Software Engineer"],
-  authors: [{ name: "Prasenjit Nayak" }],
-  creator: "Prasenjit Nayak",
-  publisher: "Prasenjit Nayak",
+  description:
+    "Abhishek Biradar is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
+  keywords: [
+    "Abhishek Biradar",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Node.js Developer",
+    "Web Developer India",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Abhishek Biradar" }],
+  creator: "Abhishek Biradar",
+  publisher: "Abhishek Biradar",
   alternates: {
     canonical: DATA.url,
   },
   openGraph: {
-    title: "Prasenjit Nayak | Full Stack Developer",
-    description: "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
+    title: "Abhishek Biradar | Full Stack Developer",
+    description:
+      "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
     url: DATA.url,
-    siteName: "Prasenjit Nayak - Portfolio",
+    siteName: "Abhishek Biradar - Portfolio",
     locale: "en_US",
     type: "website",
     images: [
@@ -45,14 +56,15 @@ export const metadata: Metadata = {
         url: `${DATA.url}/me.png`,
         width: 1200,
         height: 630,
-        alt: "Prasenjit Nayak - Full Stack Developer"
-      }
-    ]
+        alt: "Abhishek Biradar - Full Stack Developer",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Prasenjit Nayak | Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, TypeScript and Node.js',
+    card: "summary_large_image",
+    title: "Abhishek Biradar | Full Stack Developer",
+    description:
+      "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js",
     images: [`${DATA.url}/me.png`],
   },
   robots: {
@@ -61,9 +73,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
@@ -73,15 +85,51 @@ export const metadata: Metadata = {
       { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     apple: [
-      { url: "/favicons/apple-icon-57x57.png", sizes: "57x57", type: "image/png" },
-      { url: "/favicons/apple-icon-60x60.png", sizes: "60x60", type: "image/png" },
-      { url: "/favicons/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/favicons/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
-      { url: "/favicons/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/favicons/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/favicons/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
-      { url: "/favicons/apple-icon-152x152.png", sizes: "152x152", type: "image/png" },
-      { url: "/favicons/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/favicons/apple-icon-57x57.png",
+        sizes: "57x57",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-60x60.png",
+        sizes: "60x60",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-72x72.png",
+        sizes: "72x72",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-76x76.png",
+        sizes: "76x76",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-114x114.png",
+        sizes: "114x114",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-120x120.png",
+        sizes: "120x120",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-144x144.png",
+        sizes: "144x144",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-152x152.png",
+        sizes: "152x152",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-180x180.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
     ],
     other: [
       {
@@ -100,7 +148,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Prasenjit Nayak",
+    title: "Abhishek Biradar",
   },
   other: {
     "msapplication-TileColor": "#ffffff",
@@ -126,10 +174,7 @@ export default function RootLayout({
         {/* Main content */}
         <div className="relative z-10 max-w-2xl mx-auto py-12 sm:py-24 px-6">
           <GoogleAnalytics gaId="G-XVF0SFD4GW" />
-          <Script
-            id="microsoft-clarity"
-            strategy="afterInteractive"
-          >
+          <Script id="microsoft-clarity" strategy="afterInteractive">
             {`
               (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

@@ -3,21 +3,21 @@ export function JsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Prasenjit Nayak",
+      name: "Abhishek Biradar",
       givenName: "Prasenjit",
       familyName: "Nayak",
       url: "https://prasen.dev",
       jobTitle: "Full Stack Developer",
       description:
-        "Prasenjit Nayak is a Full Stack Developer specializing in React, Next.js, TypeScript, and Node.js. Creating modern web applications with clean, efficient code.",
+        "Abhishek Biradar is a Full Stack Developer specializing in React, Next.js, TypeScript, and Node.js. Creating modern web applications with clean, efficient code.",
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Prasenjit Nayak",
+      name: "Abhishek Biradar",
       url: "https://prasen.dev",
       description:
-        "Portfolio and blog of Prasenjit Nayak, Full Stack Developer",
+        "Portfolio and blog of Abhishek Biradar, Full Stack Developer",
       potentialAction: {
         "@type": "SearchAction",
         target: {
