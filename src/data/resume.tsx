@@ -17,12 +17,14 @@ export const DATA = {
   location: "Pune, India",
   locationLink: "https://www.google.com/maps/place/pune",
   description:
-    "A Full Stack Developer from India, Code is an art 🎨 be the artist!",
+    "A software developer mainly working in the JavaScript, Python & Web3 ecosystem.”",
   summary:
-    "Hello! I'm a developer from Pune, India. I enjoy programming and exploring technology. Currently doing **freelancing** and working on my own projects. Open to work, freelance, or **collaborate**.\n\nI'm actively working on [open-source projects](https://github.com/StarKnightt).",
+    `Self-taught. Curious. Always building, breaking, and learning.
+Freelancing and working across JavaScript, Python, and Web3.
+Exploring the intersection of code, philosophy, and human behavior.`,
 
   // point to the existing image under public/images/products/hi.jpg
-  avatarUrl: "/images/products/hi.jpg",
+  avatarUrl: "/images/products/hi.png",
   skills: [
     "React",
     "Next.js",
