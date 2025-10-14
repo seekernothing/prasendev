@@ -75,7 +75,7 @@ export default function Page() {
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <GhibliSkyBackground />
       </div>
-      
+
       <main className="flex flex-col min-h-[100dvh] space-y-10">
         <PersonSchema />
         <section id="hero">
@@ -111,7 +111,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        
+
         <section id="about">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <h2 className="text-xl font-bold">About</h2>
@@ -128,15 +128,17 @@ export default function Page() {
             <div className="space-y-4">
               <h2 className="text-xl font-bold">Let's collaborate 🤝🏻</h2>
               <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
-                {Object.entries(DATA.contact.social).map(([name, social], idx) => (
-                  <SocialIconLink
-                    key={name}
-                    name={name}
-                    url={social.url}
-                    icon={<social.icon />}
-                    delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
-                  />
-                ))}
+                {Object.entries(DATA.contact.social).map(
+                  ([name, social], idx) => (
+                    <SocialIconLink
+                      key={name}
+                      name={name}
+                      url={social.url}
+                      icon={<social.icon />}
+                      delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
+                    />
+                  )
+                )}
               </div>
             </div>
           </BlurFade>
@@ -172,7 +174,10 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 8}>
               <div className="grid gap-4 sm:grid-cols-2">
                 {DATA.projects.slice(0, 4).map((project) => (
-                  <div key={project.title} className="relative overflow-hidden rounded-xl">
+                  <div
+                    key={project.title}
+                    className="relative overflow-hidden rounded-xl"
+                  >
                     <ProjectCard
                       {...project}
                       tags={Array.from(project.technologies)}
@@ -180,13 +185,8 @@ export default function Page() {
                   </div>
                 ))}
               </div>
-              <Link
-                href="/projects"
-                className="mt-4 block"
-              >
-                <ShinyButton
-                  className="w-full sm:w-auto group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-semibold"
-                >
+              <Link href="/projects" className="mt-4 block">
+                <ShinyButton className="w-full sm:w-auto group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-semibold">
                   View All Projects →
                 </ShinyButton>
               </Link>
@@ -230,24 +230,20 @@ export default function Page() {
                     title: "Is Computer Science Saturated?",
                     publishedAt: "2024-06-18",
                     summary: "Blogs are preparing to launch. Stay tuned!",
-                    slug: "hello-world"
+                    slug: "hello-world",
                   }}
                 />
                 <BlogCard
                   post={{
                     title: "How to use Cursor AI IDE pro for Free ?",
                     publishedAt: "2025-04-09",
-                    summary: "A comprehensive guide explaining how to use Cursor for free",
-                    slug: "cursor-free"
+                    summary:
+                      "A comprehensive guide explaining how to use Cursor for free",
+                    slug: "cursor-free",
                   }}
                 />
-                <Link
-                  href="/blog"
-                  className="mt-4 block"
-                >
-                  <RainbowButton
-                    className="w-full sm:w-[160px] px-4 py-2 group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-bold text-sm"
-                  >
+                <Link href="/blog" className="mt-4 block">
+                  <RainbowButton className="w-full sm:w-[160px] px-4 py-2 group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-bold text-sm">
                     Read More Blogs
                   </RainbowButton>
                 </Link>
@@ -256,23 +252,24 @@ export default function Page() {
           </div>
         </section>
 
-
         <section id="contact">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-4">
               <h2 className="text-xl font-bold">Contact</h2>
-              
+
               <p className="text-muted-foreground">
-                Always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
+                Always open to discussing new projects, creative ideas, or
+                opportunities to be part of your visions. Feel free to reach
+                out!
               </p>
-              
+
               <div className="mt-6 space-y-4">
                 <a
-                  href="mailto:prasen.nayak@hotmail.com"
+                  href="mailto:seekernothing@gmail.com"
                   className="flex items-center gap-2 underline underline-offset-4 hover:opacity-70 transition-opacity"
                 >
                   <Icons.email className="size-4" />
-                  prasen.nayak@hotmail.com
+                  seekernothing@gmail.com
                 </a>
 
                 <a
@@ -293,20 +290,23 @@ export default function Page() {
             <div className="container mx-auto px-4">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div className="text-sm text-muted-foreground space-y-2">
-                  <p>© {new Date().getFullYear()} {DATA.name}. All rights reserved.</p>
                   <p>
-                    Open source under{' '}
-                    <a 
-                      href="https://opensource.org/licenses/MIT" 
+                    © {new Date().getFullYear()} {DATA.name}. All rights
+                    reserved.
+                  </p>
+                  <p>
+                    Open source under{" "}
+                    <a
+                      href="https://opensource.org/licenses/MIT"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-foreground"
                     >
                       MIT License
-                    </a>
-                    {' '}and available on{' '}
-                    <a 
-                      href="https://github.com/StarKnightt/prasendev" 
+                    </a>{" "}
+                    and available on{" "}
+                    <a
+                      href="https://github.com/StarKnightt/prasendev"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-foreground"
@@ -316,10 +316,16 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="flex space-x-4">
-                  <Link href="/sitemap.xml" className="text-sm text-muted-foreground hover:text-foreground">
+                  <Link
+                    href="/sitemap.xml"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
                     Sitemap
                   </Link>
-                  <Link href="/rss.xml" className="text-sm text-muted-foreground hover:text-foreground">
+                  <Link
+                    href="/rss.xml"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
                     RSS
                   </Link>
                 </div>

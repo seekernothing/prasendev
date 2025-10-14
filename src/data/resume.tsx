@@ -18,8 +18,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/pune",
   description:
     "A software developer mainly working in the JavaScript, Python & Web3 ecosystem.”",
-  summary:
-    `Self-taught. Curious. Always building, breaking, and learning.
+  summary: `Self-taught. Curious. Always building, breaking, and learning.
 Freelancing and working across JavaScript, Python, and Web3.
 Exploring the intersection of code, philosophy, and human behavior.`,
 
@@ -30,12 +29,14 @@ Exploring the intersection of code, philosophy, and human behavior.`,
     "Next.js",
     "Typescript",
     "Node.js",
-    "Java",
+    "Postgres",
     "MongoDB",
     "JavaScript",
     "git",
-    "Linux",
+    "AWS",
     "RestAPI",
+    "TDD",
+    "Docker",
     "AI API",
   ],
   // videos removed — section deprecated
@@ -46,56 +47,41 @@ Exploring the intersection of code, philosophy, and human behavior.`,
     { href: "/projects", icon: FolderIcon, label: "Projects" },
   ],
   contact: {
-    email: "prasen.nayak@hotmail.com",
+    email: "seekernothing@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/StarKnightt",
+        url: "https://github.com/seekernothing",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/prasenjitnayak/",
+        url: "https://www.linkedin.com/in/abhishek-biradar-/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/Star_Knight12",
+        url: "https://x.com/seekernothing",
         icon: Icons.x,
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://youtube.com/@Star_Knight12",
-        icon: Icons.youtube,
+
+      Instagram: {
+        name: "Instagram",
+        url: "https://instagram.com/seekernothing",
+        icon: Icons.instagram ? Icons.instagram : Icons.globe,
+
         navbar: true,
       },
-      CodePen: {
-        name: "CodePen",
-        url: "https://codepen.io/StarKnightt",
-        icon: Icons.codepen,
-        navbar: true,
-      },
-      Vercel: {
-        name: "Vercel",
-        url: "https://v0.link/prasenjit-nayak",
-        icon: Icons.vercel,
-        navbar: true,
-      },
-      buyMeACoffee: {
-        name: "buyMeACoffee",
-        url: "https://buymeacoffee.com/prasen",
-        icon: Icons.buyMeACoffee,
-        navbar: true,
-      },
+
       email: {
         name: "Send Email",
-        url: "mailto:prasen.nayak@hotmail.com",
+        url: "mailto:seekernothing@gmail.com",
         icon: Icons.email,
         navbar: false,
       },
