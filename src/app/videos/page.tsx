@@ -35,8 +35,8 @@ export default function VideosPage() {
         </BlurFade>
         
         <div className="grid gap-6 sm:grid-cols-2">
-          {DATA.videos.map((video, idx) => (
-            <BlurFade key={video.url} delay={BLUR_FADE_DELAY * (idx + 2)}>
+          {(Array.isArray(DATA.videos) ? DATA.videos : []).map((video: any, idx: number) => (
+            <BlurFade key={video?.url ?? idx} delay={BLUR_FADE_DELAY * (idx + 2)}>
               <VideoCard video={video} />
             </BlurFade>
           ))}
