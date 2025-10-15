@@ -183,8 +183,8 @@ Exploring the intersection of code, philosophy, and human behavior.`,
   ],
   projects: [
     {
-      title: "CleanType",
-      href: "https://clean-type.vercel.app/",
+      title: "SwipeStack",
+      href: "https://swipestack.shop/",
       dates: "March 2025 - April 2025",
       active: true,
       description:
@@ -201,22 +201,21 @@ Exploring the intersection of code, philosophy, and human behavior.`,
       links: [
         {
           type: "Website",
-          href: "https://www.cleantype.software/",
+          href: "https://swipestack.shop/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/StarKnightt/CleanType",
+          href: "https://github.com/seekernothing/SwipeStack-Backend",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/68011ca73ab3a7b826bbfac0/download.mp4",
+      image: "/images/products/swipestack.png",
+      video: "",
     },
     {
-      title: "Wallpaperz",
-      href: "https://www.wallpaperz.in/",
+      title: "Next-Homes",
+      href: "https://next-homes-lntd.vercel.app/",
       dates: "January 2025 - February 2025",
       active: true,
       description:
@@ -235,173 +234,173 @@ Exploring the intersection of code, philosophy, and human behavior.`,
       links: [
         {
           type: "Website",
-          href: "https://www.wallpaperz.in/",
+          href: "https://next-homes-lntd.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/StarKnightt/wallpaperz",
+          href: "https://github.com/seekernothing/next-homes",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/images/products/nexthomes.png",
       video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/67d5057eefcecbdea7560e35/download.mp4",
+        "",
     },
-    {
-      title: "3D Carousel Gallery",
-      href: "https://3dcarousell.vercel.app/",
-      dates: "December 2024 - January 2025",
-      active: true,
-      description:
-        "A beautiful and interactive 3D carousel gallery built with Next.js, featuring image and video support with an integrated music player.",
-      technologies: [
-        "Next.js",
-        "CSS 3D Transform",
-        "SoundCloud Widget API",
-        "Modern-Javascript",
-        "Vercel",
-        "Git",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://3dcarousell.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/3D-Carousel",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/67912b93d696a7af3b2e38ef/download.mp4",
-    },
-    {
-      title: "GitHub Buddy Finder",
-      href: "https://buddy-find.vercel.app/",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "This innovative web application helps developers connect with like-minded individuals based on their GitHub activity and language preferences.",
-      technologies: [
-        "React.js",
-        "Octokit",
-        "Rest API",
-        "TailwindCSS",
-        "react-icons",
-        "react-router-dom",
-        "Vite",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://buddy-find.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/Buddy-Finder",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ec82c84c6b7e105c3ee5/download.mp4",
-    },
-    {
-      title: "Solar System",
-      href: "https://solarrsystem.vercel.app/",
-      dates: "September 2024 - October 2024",
-      active: true,
-      description:
-        "This project is a visually stunning and interactive web application that provides information about the solar system and it's planet with music.",
-      technologies: [
-        "React.js",
-        "font-awesome",
-        "react-icons",
-        "react-dom",
-        "CSS3",
-        "Vite",
-        "Git",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://solarrsystem.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ef75b79a267f99668bda/download.mp4",
-    },
-    {
-      title: "Coffee-Website",
-      href: "https://coffee-websitee.vercel.app/",
-      dates: "September 2024 - October 2024",
-      active: true,
-      description:
-        "A web app, with the futurisitc yet nostalgic design of a coffee shop, with a menu and blend of retro vibes.",
-      technologies: [
-        "React.js",
-        "Git",
-        "TailwindCSS",
-        "Framer-motion",
-        "React-icons",
-        "React-router-dom",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://coffee-websitee.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/Coffee-Website",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ea2d080b60408ca0bc08/download.mp4",
-    },
-    {
-      title: "Resume Builder",
-      href: "https://resume-builder-ten-opal.vercel.app/",
-      dates: "May 2023 - Sept 2023",
-      active: true,
-      description:
-        "It was my final year [Project](https://github.com/StarKnightt/ResumeBuilder) in our college, It is a interactive and versatile Dynamic CV Builder, completely build from scratch with backend functionallity .",
-      technologies: [
-        "CSS",
-        "javascript",
-        "MongoDB",
-        "Express.js",
-        "HTML",
-        "Regex",
-        "Node.js",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://builddresume.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/ResumeBuilder",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+    // {
+    //   title: "3D Carousel Gallery",
+    //   href: "https://3dcarousell.vercel.app/",
+    //   dates: "December 2024 - January 2025",
+    //   active: true,
+    //   description:
+    //     "A beautiful and interactive 3D carousel gallery built with Next.js, featuring image and video support with an integrated music player.",
+    //   technologies: [
+    //     "Next.js",
+    //     "CSS 3D Transform",
+    //     "SoundCloud Widget API",
+    //     "Modern-Javascript",
+    //     "Vercel",
+    //     "Git",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://3dcarousell.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/StarKnightt/3D-Carousel",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video:
+    //     "https://video.gumlet.io/6745e593080b60408ca085f7/67912b93d696a7af3b2e38ef/download.mp4",
+    // },
+    // {
+    //   title: "GitHub Buddy Finder",
+    //   href: "https://buddy-find.vercel.app/",
+    //   dates: "April 2023 - September 2023",
+    //   active: true,
+    //   description:
+    //     "This innovative web application helps developers connect with like-minded individuals based on their GitHub activity and language preferences.",
+    //   technologies: [
+    //     "React.js",
+    //     "Octokit",
+    //     "Rest API",
+    //     "TailwindCSS",
+    //     "react-icons",
+    //     "react-router-dom",
+    //     "Vite",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://buddy-find.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/StarKnightt/Buddy-Finder",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video:
+    //     "https://video.gumlet.io/6745e593080b60408ca085f7/6745ec82c84c6b7e105c3ee5/download.mp4",
+    // },
+    // {
+    //   title: "Solar System",
+    //   href: "https://solarrsystem.vercel.app/",
+    //   dates: "September 2024 - October 2024",
+    //   active: true,
+    //   description:
+    //     "This project is a visually stunning and interactive web application that provides information about the solar system and it's planet with music.",
+    //   technologies: [
+    //     "React.js",
+    //     "font-awesome",
+    //     "react-icons",
+    //     "react-dom",
+    //     "CSS3",
+    //     "Vite",
+    //     "Git",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://solarrsystem.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video:
+    //     "https://video.gumlet.io/6745e593080b60408ca085f7/6745ef75b79a267f99668bda/download.mp4",
+    // },
+    // {
+    //   title: "Coffee-Website",
+    //   href: "https://coffee-websitee.vercel.app/",
+    //   dates: "September 2024 - October 2024",
+    //   active: true,
+    //   description:
+    //     "A web app, with the futurisitc yet nostalgic design of a coffee shop, with a menu and blend of retro vibes.",
+    //   technologies: [
+    //     "React.js",
+    //     "Git",
+    //     "TailwindCSS",
+    //     "Framer-motion",
+    //     "React-icons",
+    //     "React-router-dom",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://coffee-websitee.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/StarKnightt/Coffee-Website",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video:
+    //     "https://video.gumlet.io/6745e593080b60408ca085f7/6745ea2d080b60408ca0bc08/download.mp4",
+    // },
+    // {
+    //   title: "Resume Builder",
+    //   href: "https://resume-builder-ten-opal.vercel.app/",
+    //   dates: "May 2023 - Sept 2023",
+    //   active: true,
+    //   description:
+    //     "It was my final year [Project](https://github.com/StarKnightt/ResumeBuilder) in our college, It is a interactive and versatile Dynamic CV Builder, completely build from scratch with backend functionallity .",
+    //   technologies: [
+    //     "CSS",
+    //     "javascript",
+    //     "MongoDB",
+    //     "Express.js",
+    //     "HTML",
+    //     "Regex",
+    //     "Node.js",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://builddresume.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/StarKnightt/ResumeBuilder",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
 
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745e5e5080b60408ca08984/download.mp4",
-    },
+    //   image: "",
+    //   video:
+    //     "https://video.gumlet.io/6745e593080b60408ca085f7/6745e5e5080b60408ca08984/download.mp4",
+    // },
   ],
   hackathons: [
     {
