@@ -48,16 +48,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://seekernothing.com/favicons/favicon.ico</loc>
-    <lastmod>2023-12-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://seekernothing.com/favicons/apple-touch-icon.png</loc>
-    <lastmod>2023-12-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- removed favicon URLs to avoid outdated icon exposure -->
 </urlset>

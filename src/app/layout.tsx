@@ -22,8 +22,8 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "Abhishek Biradar | Full Stack Developer",
-    template: `%s | Abhishek Biradar`,
+    default: "seekernothing | Full Stack Developer",
+    template: `%s | seekernothing`,
   },
   description:
     "Abhishek Biradar is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     canonical: DATA.url,
   },
   openGraph: {
-    title: "Abhishek Biradar | Full Stack Developer",
+    title: "seekernothing | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
     url: DATA.url,
@@ -79,81 +79,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    ],
-    apple: [
-      {
-        url: "/favicons/apple-icon-57x57.png",
-        sizes: "57x57",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-60x60.png",
-        sizes: "60x60",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-72x72.png",
-        sizes: "72x72",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-76x76.png",
-        sizes: "76x76",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-114x114.png",
-        sizes: "114x114",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-120x120.png",
-        sizes: "120x120",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-144x144.png",
-        sizes: "144x144",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-152x152.png",
-        sizes: "152x152",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/apple-icon-180x180.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
-    other: [
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "192x192",
-        url: "/favicons/android-icon-192x192.png",
-      },
-      {
-        rel: "manifest",
-        url: "/favicons/manifest.json",
-      },
-    ],
+    icon: [{ url: "/images/products/hi.png?v=3", type: "image/png" }],
   },
-  manifest: "/favicons/manifest.json",
+  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Abhishek Biradar",
+    title: "seekernothing",
   },
   other: {
     "msapplication-TileColor": "#ffffff",
-    "msapplication-TileImage": "/favicons/ms-icon-144x144.png",
-    "msapplication-config": "/favicons/browserconfig.xml",
     "theme-color": "#ffffff",
   },
 };

@@ -1,14 +1,14 @@
 {
-  "name": "Abhishek Biradar",
-  "short_name": "seekernothing.com",
+  "name": "seekernothing",
+  "short_name": "seekernothing",
   "icons": [
     {
-      "src": "/favicons/android-chrome-192x192.png",
+      "src": "/images/products/hi.png?v=3",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/favicons/android-chrome-512x512.png",
+      "src": "/images/products/hi.png?v=3",
       "sizes": "512x512",
       "type": "image/png"
     }
