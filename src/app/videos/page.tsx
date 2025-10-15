@@ -5,14 +5,18 @@ import { VideoSkeleton } from "@/components/skeletons/video-skeleton";
 
 export const metadata = {
   title: "Videos",
-  description: "Watch my latest videos about software development and technology.",
+  description:
+    "Watch my latest videos about software development and technology.",
 };
 
 const BLUR_FADE_DELAY = 0.04;
 
-const VideoCard = dynamic(() => import("@/components/video-card").then(mod => mod.VideoCard), {
-  loading: () => <VideoSkeleton />
-});
+const VideoCard = dynamic(
+  () => import("@/components/video-card").then((mod) => mod.VideoCard),
+  {
+    loading: () => <VideoSkeleton />,
+  }
+);
 
 export default function VideosPage() {
   return (
@@ -28,18 +32,24 @@ export default function VideosPage() {
                 Latest Videos
               </h1>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Watch my latest videos about software development and technology.
+                Watch my latest videos about software development and
+                technology.
               </p>
             </div>
           </div>
         </BlurFade>
-        
+
         <div className="grid gap-6 sm:grid-cols-2">
-          {(Array.isArray(DATA.videos) ? DATA.videos : []).map((video: any, idx: number) => (
-            <BlurFade key={video?.url ?? idx} delay={BLUR_FADE_DELAY * (idx + 2)}>
-              <VideoCard video={video} />
-            </BlurFade>
-          ))}
+          {(Array.isArray(DATA.videos) ? DATA.videos : []).map(
+            (video: any, idx: number) => (
+              <BlurFade
+                key={video?.url ?? idx}
+                delay={BLUR_FADE_DELAY * (idx + 2)}
+              >
+                <VideoCard video={video} />
+              </BlurFade>
+            )
+          )}
         </div>
       </section>
     </main>
