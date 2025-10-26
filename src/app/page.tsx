@@ -111,13 +111,14 @@ export default function Page() {
               </div>
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <div className="profile-wrapper md:-translate-x-4 lg:-translate-x-6 xl:-translate-x-10">
-                  <Avatar className="size-28 relative z-10">
+                  <Avatar className="size-28 relative z-10 border-4 border-primary/10 shadow-lg">
                     <AvatarImage
                       alt={DATA.name}
                       src={DATA.avatarUrl}
                       width={112}
                       height={112}
                       loading="eager"
+                      className="rounded-full"
                     />
                     <AvatarFallback>{DATA.initials}</AvatarFallback>
                   </Avatar>

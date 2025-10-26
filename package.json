@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run version:assets",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "version:assets": "node scripts/version-assets.js"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.7",

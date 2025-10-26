@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${DATA.url}/me.png`,
+        url: `${DATA.url}/images/products/hi.v4.png`,
         width: 1200,
         height: 630,
         alt: "Abhishek Biradar - Full Stack Developer",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "Abhishek Biradar | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js",
-    images: [`${DATA.url}/me.png`],
+    images: [`${DATA.url}/images/products/hi.v4.png`],
   },
   robots: {
     index: true,
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/images/products/hi.png?v=3", type: "image/png" }],
+    icon: [{ url: "/images/products/favicon.ico", type: "image/x-icon" }],
   },
   manifest: "/manifest.json",
   appleWebApp: {

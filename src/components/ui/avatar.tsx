@@ -27,7 +27,10 @@ const AvatarImage = React.forwardRef<
   <AvatarPrimitive.Image
     ref={ref}
     // ensure the image fills the avatar container without distortion
-    className={cn("aspect-square h-full w-full object-cover", className)}
+    className={cn(
+      "aspect-square h-full w-full object-cover rounded-full",
+      className
+    )}
     {...props}
   />
 ));

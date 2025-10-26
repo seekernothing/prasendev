@@ -66,12 +66,37 @@ function GitHubCalendarErrorBoundary({
   const [hasError, setHasError] = React.useState(false);
   const [retryKey, setRetryKey] = React.useState(0);
 
+  React.useEffect(() => {
+    // Reset error state after some time to allow retries
+    const timer = setTimeout(() => {
+      if (hasError) {
+        setHasError(false);
+        setRetryKey((k) => k + 1);
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [hasError]);
+
+  React.useEffect(() => {
+    // Listen for unhandled errors in the calendar
+    const handleError = () => {
+      // eslint-disable-next-line no-console
+      console.log("GitHub Calendar: Attempting to load...");
+    };
+    window.addEventListener("error", handleError);
+    return () => window.removeEventListener("error", handleError);
+  }, []);
+
   if (hasError) {
     return (
       <div className="rounded-md border border-muted p-4 text-sm bg-muted/50">
         <div className="font-medium">GitHub Contributions</div>
         <div className="text-muted-foreground mt-2">
           Could not load contribution data for "{username}".
+          <br />
+          <span className="text-xs">
+            Rate limits or network issues. Check GitHub is accessible.
+          </span>
         </div>
         <div className="mt-3 flex gap-2">
           <a
@@ -99,7 +124,7 @@ function GitHubCalendarErrorBoundary({
   // Render inside try/catch using a key to re-mount on retry
   try {
     return (
-      <React.Fragment key={retryKey}>
+      <div key={retryKey}>
         <GitHubCalendar
           username={username}
           colorScheme={resolvedTheme as "light" | "dark"}
@@ -107,7 +132,7 @@ function GitHubCalendarErrorBoundary({
           blockSize={12}
           blockMargin={4}
         />
-      </React.Fragment>
+      </div>
     );
   } catch (e) {
     // If the library throws synchronously, catch and show fallback

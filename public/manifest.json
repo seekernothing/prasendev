@@ -3,12 +3,12 @@
   "short_name": "seekernothing",
   "icons": [
     {
-      "src": "/images/products/hi.png?v=3",
+      "src": "/images/products/hi.v4.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/products/hi.png?v=3",
+      "src": "/images/products/hi.v4.png",
       "sizes": "512x512",
       "type": "image/png"
     }
