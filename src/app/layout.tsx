@@ -13,6 +13,9 @@ import { PageBackground } from "@/components/page-background";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import dynamic from "next/dynamic";
+
+const OnekoCat = dynamic(() => import("@/components/oneko"), { ssr: false });
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,8 +25,8 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "seekernothing | Full Stack Developer",
-    template: `%s | seekernothing`,
+    default: "Abhishek Biradar | Full Stack Developer",
+    template: `%s | Abhishek Biradar`,
   },
   description:
     "Abhishek Biradar is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
@@ -44,7 +47,7 @@ export const metadata: Metadata = {
     canonical: DATA.url,
   },
   openGraph: {
-    title: "seekernothing | Full Stack Developer",
+    title: "Abhishek Biradar | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
     url: DATA.url,
@@ -105,6 +108,9 @@ export default function RootLayout({
         <div className="fixed inset-0 z-[-1]">
           <PageBackground />
         </div>
+
+        {/* Oneko cat */}
+        <OnekoCat />
 
         {/* Main content */}
         <div className="relative z-10 max-w-2xl mx-auto py-12 sm:py-24 px-6">

@@ -22,13 +22,13 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { GhibliSkyBackground } from "@/components/ghibli-elements";
 const BLUR_FADE_DELAY = 0.04;
 export const metadata: Metadata = {
-  title: "seekernothing",
+  title: "Abhishek Biradar",
   description: DATA.summary,
   openGraph: {
-    title: DATA.name,
+    title: "Abhishek Biradar",
     description: DATA.summary,
     url: DATA.url,
-    siteName: DATA.name,
+    siteName: "Abhishek Biradar",
     images: [
       {
         url: "https://seekernothing.com/portfolio.png",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: DATA.name,
+    title: "Abhishek Biradar",
     description: DATA.summary,
     creator: "@" + "Star_Knight12",
     images: ["https://seekernothing.com/portfolio.png"],
