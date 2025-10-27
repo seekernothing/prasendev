@@ -13,6 +13,7 @@ import { PageBackground } from "@/components/page-background";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import OnekoCat from "@/components/oneko";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -51,21 +52,21 @@ export const metadata: Metadata = {
     siteName: "Abhishek Biradar - Portfolio",
     locale: "en_US",
     type: "website",
-      images: [
-        {
-          url: `${DATA.url}/images/products/hi.v4.png`,
-          width: 1200,
-          height: 630,
-          alt: "Abhishek Biradar - Full Stack Developer",
-        },
-      ],
+    images: [
+      {
+        url: `${DATA.url}/images/products/hi.v4.png`,
+        width: 1200,
+        height: 630,
+        alt: "Abhishek Biradar - Full Stack Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Abhishek Biradar | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js",
-      images: [`${DATA.url}/images/products/hi.v4.png`],
+    images: [`${DATA.url}/images/products/hi.v4.png`],
   },
   robots: {
     index: true,
@@ -131,6 +132,7 @@ export default function RootLayout({
               <Analytics />
               <SpeedInsights />
               <Navbar />
+              <OnekoCat />
             </TooltipProvider>
           </ThemeProvider>
         </div>
