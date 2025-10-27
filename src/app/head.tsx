@@ -6,9 +6,9 @@ export default function Head() {
       <title>seekernothing</title>
       <meta name="application-name" content="seekernothing" />
       <meta name="apple-mobile-web-app-title" content="seekernothing" />
-      <link rel="icon" href="/images/products/hi.v4.png?v=5" />
-      <link rel="apple-touch-icon" href="/images/products/hi.v4.png?v=5" />
-      <link rel="manifest" href="/manifest.json?v=5" />
+      <link rel="icon" href="/images/products/hi.v4.png" />
+      <link rel="apple-touch-icon" href="/images/products/hi.v4.png" />
+      <link rel="manifest" href="/manifest.json?v=4" />
     </>
   );
 }

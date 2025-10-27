@@ -13,9 +13,6 @@ import { PageBackground } from "@/components/page-background";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import dynamic from "next/dynamic";
-
-const OnekoCat = dynamic(() => import("@/components/oneko"), { ssr: false });
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,8 +22,8 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "Abhishek Biradar | Full Stack Developer",
-    template: `%s | Abhishek Biradar`,
+    default: "seekernothing | Full Stack Developer",
+    template: `%s | seekernothing`,
   },
   description:
     "Abhishek Biradar is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
@@ -47,28 +44,28 @@ export const metadata: Metadata = {
     canonical: DATA.url,
   },
   openGraph: {
-    title: "Abhishek Biradar | Full Stack Developer",
+    title: "seekernothing | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
     url: DATA.url,
     siteName: "Abhishek Biradar - Portfolio",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: `${DATA.url}/images/products/hi.v4.png`,
-        width: 1200,
-        height: 630,
-        alt: "Abhishek Biradar - Full Stack Developer",
-      },
-    ],
+      images: [
+        {
+          url: `${DATA.url}/images/products/hi.v4.png`,
+          width: 1200,
+          height: 630,
+          alt: "Abhishek Biradar - Full Stack Developer",
+        },
+      ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Abhishek Biradar | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js",
-    images: [`${DATA.url}/images/products/hi.v4.png`],
+      images: [`${DATA.url}/images/products/hi.v4.png`],
   },
   robots: {
     index: true,
@@ -82,7 +79,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/images/products/favicon.ico", type: "image/x-icon" }],
+    icon: [{ url: "/images/products/hi.png?v=3", type: "image/png" }],
   },
   manifest: "/manifest.json",
   appleWebApp: {
@@ -108,9 +105,6 @@ export default function RootLayout({
         <div className="fixed inset-0 z-[-1]">
           <PageBackground />
         </div>
-
-        {/* Oneko cat */}
-        <OnekoCat />
 
         {/* Main content */}
         <div className="relative z-10 max-w-2xl mx-auto py-12 sm:py-24 px-6">
