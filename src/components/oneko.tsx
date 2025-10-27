@@ -251,14 +251,5 @@ export default function OnekoCat() {
     backgroundImage: "url(/images/products/oneko.gif)",
   };
 
-  // Don't render if reduced motion is preferred
-  const isReducedMotion =
-    typeof window !== "undefined" &&
-    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
-
-  if (isReducedMotion) {
-    return null;
-  }
-
   return <div id="oneko" ref={nekoRef} aria-hidden="true" style={nekoStyle} />;
 }

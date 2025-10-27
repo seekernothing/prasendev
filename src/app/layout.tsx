@@ -132,10 +132,12 @@ export default function RootLayout({
               <Analytics />
               <SpeedInsights />
               <Navbar />
-              <OnekoCat />
             </TooltipProvider>
           </ThemeProvider>
         </div>
+
+        {/* Oneko cat - rendered outside the container so it can move on full screen */}
+        <OnekoCat />
       </body>
     </html>
   );
