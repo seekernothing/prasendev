@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/images/products/hi.png?v=3", type: "image/png" }],
+    icon: [{ url: "/images/products/favicon.ico", type: "image/x-icon" }],
   },
   manifest: "/manifest.json",
   appleWebApp: {
