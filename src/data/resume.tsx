@@ -47,7 +47,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
     { href: "/projects", icon: FolderIcon, label: "Projects" },
   ],
   contact: {
-    email: "seekernothing@gmail.com",
+    email: "seekernothing@proton.me",
     social: {
       GitHub: {
         name: "GitHub",
@@ -81,7 +81,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
 
       email: {
         name: "Send Email",
-        url: "mailto:seekernothing@gmail.com",
+        url: "mailto:seekernothing@proton.me",
         icon: Icons.email,
         navbar: false,
       },
@@ -188,15 +188,15 @@ Exploring the intersection of code, philosophy, and human behavior.`,
       dates: "March 2025 - April 2025",
       active: true,
       description:
-        "A super minimalist write experience, type with minimalist, no noise and distraction, completely fresh Windows app, with a clean UI and no ads, just pure writing experience.",
+        "SwipeStack is a modern dating application built with the MERN stack, designed to facilitate meaningful connections through an engaging user experience. The platform combines secure authentication, real-time communication, and seamless payment processing with a Tinder-inspired interface.",
       technologies: [
-        "Rust",
-        "Tauri",
-        "Typescript",
-        "CSS",
-        "Vite",
-        "Git",
         "React",
+        "Node",
+        "Socket.IO",
+        "Razorpay SDK",
+        "MongoDB",
+        "AWS-EC2",
+        "Javascript",
       ],
       links: [
         {
@@ -244,8 +244,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
         },
       ],
       image: "/images/products/nexthomes.png",
-      video:
-        "",
+      video: "",
     },
     // {
     //   title: "3D Carousel Gallery",
