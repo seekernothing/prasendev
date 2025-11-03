@@ -309,7 +309,7 @@ export default function Page() {
                     </a>
                   </p>
                 </div>
-                <div className="flex space-x-4">
+                {/* <div className="flex space-x-4">
                   <Link
                     href="/sitemap.xml"
                     className="text-sm text-muted-foreground hover:text-foreground"
@@ -322,7 +322,7 @@ export default function Page() {
                   >
                     RSS
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </BlurFade>
