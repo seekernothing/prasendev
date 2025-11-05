@@ -219,17 +219,15 @@ Exploring the intersection of code, philosophy, and human behavior.`,
       dates: "January 2025 - February 2025",
       active: true,
       description:
-        "A modern wallpaper discovery platform where you can find stunning wallpapers and generate images with AI.",
+        "Built Fire Homes, a full-stack real estate app using Next.js 15, TypeScript, Firebase (Auth, Firestore, Storage), and Zod. I implemented role-based authentication, CRUD for property listings, and image uploads. It helps users search, save, and manage homes easily, while giving admins a smooth dashboard to handle listings efficiently.",
       technologies: [
-        "Next.js",
-        "Git",
-        "TailwindCSS",
-        "Framer-motion",
+        "Next.js 15",
         "TypeScript",
-        "Imagekit",
+        "Zod",
+        "Firestore Database",
+        "Firebase Authentication & Cloud Storage",
         "shadcnUI",
-        "DreamStudio",
-        "Stability AI",
+       
       ],
       links: [
         {
