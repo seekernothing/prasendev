@@ -260,11 +260,11 @@ export default function Page() {
 
               <div className="mt-6 space-y-4">
                 <a
-                  href="mailto:seekernothing@proton.me"
+                  href="mailto:seekernothing@hotmail.com"
                   className="flex items-center gap-2 underline underline-offset-4 hover:opacity-70 transition-opacity"
                 >
                   <Icons.email className="size-4" />
-                  seekernothing@proton.me
+                  seekernothing@hotmail.com
                 </a>
 
                 <a

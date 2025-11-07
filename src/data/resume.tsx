@@ -47,7 +47,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
     { href: "/projects", icon: FolderIcon, label: "Projects" },
   ],
   contact: {
-    email: "seekernothing@proton.me",
+    email: "seekernothing@hotmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -81,7 +81,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
 
       email: {
         name: "Send Email",
-        url: "mailto:seekernothing@proton.me",
+        url: "mailto:seekernothing@hotmail.com",
         icon: Icons.email,
         navbar: false,
       },
@@ -227,7 +227,6 @@ Exploring the intersection of code, philosophy, and human behavior.`,
         "Firestore Database",
         "Firebase Authentication & Cloud Storage",
         "shadcnUI",
-       
       ],
       links: [
         {
