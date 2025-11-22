@@ -100,10 +100,10 @@ export default function Page() {
               <div className="flex-col flex flex-1 space-y-1.5">
                 <BlurFadeText
                   delay={BLUR_FADE_DELAY}
-                  className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                  className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                   yOffset={8}
                   text={`Hi, I'm ${DATA.name.split(" ")[0]} 
-                   `}
+                 `}
                 />
                 <BlurFadeText
                   className="max-w-[600px] md:text-xl"
@@ -144,7 +144,7 @@ export default function Page() {
         <section id="connect">
           <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
             <div className="space-y-4">
-              <h2 className="text-xl font-bold">Let's collaborate 🤝🏻</h2>
+              <h2 className="text-xl font-bold">Socials</h2>
               <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
                 {Object.entries(DATA.contact.social).map(
                   ([name, social], idx) => (

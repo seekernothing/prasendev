@@ -40,7 +40,7 @@ export function SpotifyCard() {
 
   return (
     <div className="relative overflow-hidden rounded-xl">
-       <BorderBeam
+      <BorderBeam
         duration={8}
         size={200}
         className="from-transparent via-green-500 to-transparent"
@@ -59,7 +59,7 @@ export function SpotifyCard() {
             "hover:bg-accent/50 transition-colors duration-300"
           )}
         >
-          <div className="absolute right-4 top-4 text-muted-foreground group-hover:text-[#1DB954] transition-colors duration-300">
+          <div className="absolute right-4 top-4 text-[#1DB954]">
             <SpotifyIcon className="h-6 w-6" />
           </div>
 
@@ -69,7 +69,7 @@ export function SpotifyCard() {
                 src={data.albumImageUrl}
                 alt="Album Art"
                 className={cn(
-                  "h-20 w-20 rounded-md object-cover shadow-md",
+                  "h-20 w-20 rounded-full object-cover shadow-md",
                   data.isPlaying && "animate-[spin_10s_linear_infinite]"
                 )}
               />
