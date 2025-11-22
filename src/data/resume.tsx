@@ -17,7 +17,7 @@ export const DATA = {
   location: "Pune, India",
   locationLink: "https://www.google.com/maps/place/pune",
   description:
-    "A software developer mainly working in the JavaScript, Python & Web3 ecosystem.”",
+    "A software developer mainly working in the JavaScript, Python & Web3 ecosystem.",
   summary: `Self-taught. Curious. Always building, breaking, and learning.
 Freelancing and working across JavaScript, Python, and Web3.
 Exploring the intersection of code, philosophy, and human behavior.`,
