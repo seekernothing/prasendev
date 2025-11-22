@@ -20,6 +20,7 @@ import { ProjectSkeleton } from "@/components/skeletons/project-skeleton";
 import { HackathonSkeleton } from "@/components/skeletons/hackathon-skeleton";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { GhibliSkyBackground } from "@/components/ghibli-elements";
+import { SpotifyCard } from "@/components/spotify-card";
 const BLUR_FADE_DELAY = 0.04;
 export const metadata: Metadata = {
   title: "Abhishek Biradar",
@@ -174,6 +175,13 @@ export default function Page() {
               ))}
             </div>
           </div>
+        </section>
+
+        <section id="spotify">
+          <BlurFade delay={BLUR_FADE_DELAY * 9.5}>
+            <h2 className="text-xl font-bold mb-4">Listening to</h2>
+            <SpotifyCard />
+          </BlurFade>
         </section>
 
         <section id="contributions">
