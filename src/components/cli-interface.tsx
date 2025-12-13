@@ -23,24 +23,6 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-const ASCII_ART = `
-██████╗ ██████╗  █████╗ ███████╗███████╗███╗   ██╗     ██████╗██╗     ██╗
-██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝████╗  ██║    ██╔════╝██║     ██║
-██████╔╝██████╔╝███████║███████╗█████╗  ██╔██╗ ██║    ██║     ██║     ██║
-██╔═══╝ ██╔══██╗██╔══██║╚════██║██╔══╝  ██║╚██╗██║    ██║     ██║     ██║
-██║     ██║  ██║██║  ██║███████║███████╗██║ ╚████║    ╚██████╗███████╗██║
-╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝     ╚═════╝╚══════╝╚═╝
-`;
-
-const MOBILE_ASCII_ART = `
-██████╗ ██████╗ ███╗   ██╗
-██╔══██╗██╔══██╗████╗  ██║
-██████╔╝██████╔╝██╔██╗ ██║
-██╔═══╝ ██╔══██╗██║╚██╗██║
-██║     ██║  ██║██║ ╚████║
-╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝
-`;
-
 interface CliInterfaceProps {
   onGuiCommand: () => void;
   onMinimize?: () => void;
@@ -180,7 +162,7 @@ export function CliInterface({
     setOutput([
       isMobile
         ? "Welcome to seekernothing.com CLI! 👋"
-        : ASCII_ART + "\nWelcome to my portfolio CLI! 👋",
+        : "Welcome to my portfolio CLI! 👋",
       'Type "help" or "?" to see available commands.',
       "",
     ]);

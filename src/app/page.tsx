@@ -1,3 +1,4 @@
+import { getBlogPosts } from "@/data/blog";
 import dynamic from "next/dynamic";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -85,7 +86,8 @@ const HackathonCardDynamic = dynamic(
   }
 );
 
-export default function Page() {
+export default async function Page() {
+  const posts = await getBlogPosts();
   return (
     <>
       <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -228,23 +230,28 @@ export default function Page() {
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 10}>
               <div className="flex flex-col space-y-4">
-                <BlogCard
-                  post={{
-                    title: "Is Computer Science Saturated?",
-                    publishedAt: "2024-06-18",
-                    summary: "Blogs are preparing to launch. Stay tuned!",
-                    slug: "hello-world",
-                  }}
-                />
-                <BlogCard
-                  post={{
-                    title: "How to use Cursor AI IDE pro for Free ?",
-                    publishedAt: "2025-04-09",
-                    summary:
-                      "A comprehensive guide explaining how to use Cursor for free",
-                    slug: "cursor-free",
-                  }}
-                />
+                {posts
+                  .sort((a, b) => {
+                    if (
+                      new Date(a.metadata.publishedAt) >
+                      new Date(b.metadata.publishedAt)
+                    ) {
+                      return -1;
+                    }
+                    return 1;
+                  })
+                  .slice(0, 2)
+                  .map((post) => (
+                    <BlogCard
+                      key={post.slug}
+                      post={{
+                        title: post.metadata.title,
+                        publishedAt: post.metadata.publishedAt,
+                        summary: post.metadata.summary,
+                        slug: post.slug,
+                      }}
+                    />
+                  ))}
                 <Link href="/blog" className="mt-4 block">
                   <RainbowButton className="w-full sm:w-[160px] px-4 py-2 group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-bold text-sm">
                     Read More Blogs
