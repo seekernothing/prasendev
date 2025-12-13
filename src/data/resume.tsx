@@ -22,8 +22,8 @@ export const DATA = {
 Freelancing and working across JavaScript, Python, and Web3.
 Exploring the intersection of code, philosophy, and human behavior.`,
 
-  // point to the existing image under public/images/products/hi.jpg
-  avatarUrl: "/images/products/hi.jpg",
+  // point to the existing image under public/images/products/
+  avatarUrl: "/images/products/hi.v4.png",
   skills: [
     "React",
     "Next.js",
