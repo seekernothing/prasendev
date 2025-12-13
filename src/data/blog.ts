@@ -37,11 +37,7 @@ export async function markdownToHTML(markdown: string) {
 }
 
 export async function getPost(slug: string) {
-  console.log("getPost slug (raw):", slug);
-  const decodedSlug = decodeURIComponent(slug);
-  console.log("getPost slug (decoded):", decodedSlug);
-  const filePath = path.join("content", `${decodedSlug}.mdx`);
-  console.log("getPost filePath:", filePath);
+  const filePath = path.join("content", `${decodeURIComponent(slug)}.mdx`);
   let source = fs.readFileSync(filePath, "utf-8");
   const { content: rawContent, data: metadata } = matter(source);
   const content = await markdownToHTML(rawContent);

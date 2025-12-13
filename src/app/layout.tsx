@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${DATA.url}/images/products/hi.v4.png`,
+        url: `${DATA.url}/images/products/hi.v4.jpg`,
         width: 1200,
         height: 630,
         alt: "Abhishek Biradar - Full Stack Developer",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Abhishek Biradar | Full Stack Developer",
     description:
       "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js",
-    images: [`${DATA.url}/images/products/hi.v4.png`],
+    images: [`${DATA.url}/images/products/hi.v4.jpg`],
   },
   robots: {
     index: true,
