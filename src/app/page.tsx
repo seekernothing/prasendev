@@ -120,7 +120,7 @@ export default function Page() {
                       width={112}
                       height={112}
                       loading="eager"
-                      className="rounded-full"
+                      className="rounded-full object-cover scale-126"
                     />
                     <AvatarFallback>{DATA.initials}</AvatarFallback>
                   </Avatar>

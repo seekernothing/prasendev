@@ -3,151 +3,151 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 210 11.1% 3.53%;
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 11.1% 3.53%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 210 11.1% 3.53%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 11.1% 3.53%;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 210 11.1% 3.53%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11.1% 3.53%;
 
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
 
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
 
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
 
-      --accent: 0 0% 96.1%;
+    --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
 
-      --radius: 0.5rem;
+    --radius: 0.5rem;
 
-      --color-1: 0 100% 63%;
+    --color-1: 0 100% 63%;
 
-      --color-2: 270 100% 63%;
+    --color-2: 270 100% 63%;
 
-      --color-3: 210 100% 63%;
+    --color-3: 210 100% 63%;
 
-      --color-4: 195 100% 63%;
+    --color-4: 195 100% 63%;
 
-      --color-5: 90 100% 63%;
+    --color-5: 90 100% 63%;
 
-      --ghibli-element-fill: 210 11.1% 85%; /* Light gray for light mode */
-      --ghibli-element-opacity: 0.6;
-    }
-
-    .dark {
-      --background: 210 11.1% 3.53%;
-      --foreground: 0 0% 98%;
-
-      --card: 210 11.1% 3.53%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 210 11.1% 3.53%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
-
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
-      --color-1: 0 100% 63%;
-      --color-2: 270 100% 63%;
-      --color-3: 210 100% 63%;
-      --color-4: 195 100% 63%;
-      --color-5: 90 100% 63%;
-
-      --ghibli-element-fill: 0 0% 100%; /* White for dark mode */
-      --ghibli-element-opacity: 0.9;
-    }
+    --ghibli-element-fill: 210 11.1% 85%; /* Light gray for light mode */
+    --ghibli-element-opacity: 0.6;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
-  }
+  .dark {
+    --background: 210 11.1% 3.53%;
+    --foreground: 0 0% 98%;
 
-  h3 code {
-    @apply !text-lg md:!text-xl;
-  }
-  
-  pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
-  }
-   
-  pre [data-line] {
-    @apply px-4
-  }
+    --card: 210 11.1% 3.53%;
+    --card-foreground: 0 0% 98%;
 
-  code {
-    @apply text-sm md:text-base !leading-loose;
+    --popover: 210 11.1% 3.53%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+
+    --ghibli-element-fill: 0 0% 100%; /* White for dark mode */
+    --ghibli-element-opacity: 0.9;
   }
-  
-  pre > code {
-    counter-reset: line;
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
+}
+
+pre [data-line] {
+  @apply px-4;
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre > code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
   code[data-theme*=" "],
   code[data-theme*=" "] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
   }
-   
-  @media (prefers-color-scheme: dark) {
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-      color: var(--shiki-dark);
-      background-color: var(--shiki-dark-bg);
-    }
-  }
-  
-  code[data-line-numbers] {
-    counter-reset: line;
-  }
-  
-  code[data-line-numbers] > [data-line]::before {
-    counter-increment: line;
-    content: counter(line);
-    @apply inline-block w-4 mr-4 text-right text-gray-500;
-  }
- 
-  code {
-    counter-reset: line;
-  }
- 
-  code > [data-line]::before {
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
- 
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
+}
+
+code {
+  counter-reset: line;
+}
+
+code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+
   /* Other styling */
   display: inline-block;
   width: 1rem;
@@ -155,11 +155,11 @@
   text-align: right;
   color: gray;
 }
- 
+
 code[data-line-numbers-max-digits="2"] > [data-line]::before {
   width: 2rem;
 }
- 
+
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
@@ -204,24 +204,22 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .profile-wrapper {
   position: relative;
   border-radius: 50%;
-  padding: 2px; 
+  padding: 2px;
 }
 
 .profile-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
-  inset: -2px; 
+  inset: -2px;
   border-radius: 50%;
   padding: 2px;
   background: linear-gradient(
     45deg,
-    hsl(var(--muted-foreground)),
-    hsl(var(--foreground)) 45%,
-    hsl(var(--muted-foreground))
+    hsl(217, 91%, 60%),
+    hsl(217, 100%, 80%) 45%,
+    hsl(217, 91%, 60%)
   );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   animation: rotate 8s linear infinite; /* slowed down from 4s */
