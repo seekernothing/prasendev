@@ -188,7 +188,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
       dates: "March 2025 - April 2025",
       active: true,
       description:
-        "SwipeStack is a modern dating application built with the MERN stack, designed to facilitate meaningful connections through an engaging user experience. The platform combines secure authentication, real-time communication, and seamless payment processing with a Tinder-inspired interface.",
+        "SwipeStack is a real-time developer networking platform featuring instant matching and live chat using Socket.io., designed to facilitate meaningful connections through an engaging user experience. The platform combines secure authentication, real-time communication, and seamless payment processing with a Tinder-inspired interface.",
       technologies: [
         "React",
         "Node",
