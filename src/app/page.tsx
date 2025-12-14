@@ -316,7 +316,7 @@ export default async function Page() {
                     </a>{" "}
                     and available on{" "}
                     <a
-                      href="https://github.com/StarKnightt/prasendev"
+                      href="https://github.com/seekernothing/prasendev"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-foreground"
