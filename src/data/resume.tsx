@@ -23,7 +23,7 @@ Freelancing and working across JavaScript, Python, and Web3.
 Exploring the intersection of code, philosophy, and human behavior.`,
 
   // point to the existing image under public/images/products/
-  avatarUrl: "/images/products/uni.jpg",
+  avatarUrl: "/images/products/musashi.jpg",
   skills: [
     "React",
     "Next.js",
