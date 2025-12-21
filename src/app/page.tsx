@@ -154,7 +154,7 @@ export default async function Page() {
                       key={name}
                       name={name}
                       url={social.url}
-                      icon={<social.icon />}
+                      icon={<social.icon className="size-full" />}
                       delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
                     />
                   )
