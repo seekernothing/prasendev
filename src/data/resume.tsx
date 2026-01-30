@@ -47,7 +47,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
     { href: "/projects", icon: FolderIcon, label: "Projects" },
   ],
   contact: {
-    email: "seekernothing@hotmail.com",
+    email: "abhishekbiradar@hotmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -81,7 +81,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
 
       email: {
         name: "Send Email",
-        url: "mailto:seekernothing@hotmail.com",
+        url: "mailto:abhishekbiradar@hotmail.com",
         icon: Icons.email,
         navbar: false,
       },

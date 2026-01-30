@@ -27,9 +27,10 @@ function SpotifyIcon(props: React.SVGProps<SVGSVGElement>) {
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-export function SpotifyCard() {
+export function SpotifyCard({ initialData }: { initialData?: SpotifyData }) {
   const { data, error } = useSWR<SpotifyData>("/api/spotify", fetcher, {
     refreshInterval: 10000,
+    fallbackData: initialData,
   });
 
   if (error || !data) {
@@ -56,7 +57,7 @@ export function SpotifyCard() {
           target="_blank"
           className={cn(
             "group relative flex h-full items-center gap-x-4 p-4",
-            "hover:bg-accent/50 transition-colors duration-300"
+            "hover:bg-accent/50 transition-colors duration-300",
           )}
         >
           <div className="absolute right-4 top-4 text-[#1DB954]">
@@ -70,7 +71,7 @@ export function SpotifyCard() {
                 alt="Album Art"
                 className={cn(
                   "h-20 w-20 rounded-full object-cover shadow-md",
-                  data.isPlaying && "animate-[spin_10s_linear_infinite]"
+                  data.isPlaying && "animate-[spin_10s_linear_infinite]",
                 )}
               />
             ) : (

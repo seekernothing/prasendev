@@ -1,7 +1,8 @@
 import { getBlogPosts } from "@/data/blog";
-import dynamic from "next/dynamic";
-import { DATA } from "@/data/resume";
+import dynamic from "next/dynamic"; // Restore dynamic import
+import { DATA } from "@/data/resume"; // Re-ordered to match conventions if needed, but keeping it simple
 import Link from "next/link";
+import Image from "next/image"; // Added Image import
 import Markdown from "react-markdown";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -19,9 +20,11 @@ import { BlogSkeleton } from "@/components/skeletons/blog-skeleton";
 import { GithubSkeleton } from "@/components/skeletons/github-skeleton";
 import { ProjectSkeleton } from "@/components/skeletons/project-skeleton";
 import { HackathonSkeleton } from "@/components/skeletons/hackathon-skeleton";
+import { GithubContributions } from "@/components/github-calendar"; // Static import
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { GhibliSkyBackground } from "@/components/ghibli-elements";
 import { SpotifyCard } from "@/components/spotify-card";
+import { getSpotifyData } from "@/lib/spotify"; // Import fetching logic
 const BLUR_FADE_DELAY = 0.04;
 export const metadata: Metadata = {
   title: "Abhishek Biradar",
@@ -56,18 +59,7 @@ const BlogCard = dynamic(
   {
     ssr: true,
     loading: () => <BlogSkeleton />,
-  }
-);
-
-const GithubContributions = dynamic(
-  () =>
-    import("@/components/github-calendar").then(
-      (mod) => mod.GithubContributions
-    ),
-  {
-    ssr: false,
-    loading: () => <GithubSkeleton />,
-  }
+  },
 );
 
 const ProjectCardDynamic = dynamic(
@@ -75,7 +67,7 @@ const ProjectCardDynamic = dynamic(
   {
     ssr: true,
     loading: () => <ProjectSkeleton />,
-  }
+  },
 );
 
 const HackathonCardDynamic = dynamic(
@@ -83,11 +75,13 @@ const HackathonCardDynamic = dynamic(
   {
     ssr: true,
     loading: () => <HackathonSkeleton />,
-  }
+  },
 );
 
 export default async function Page() {
   const posts = await getBlogPosts();
+  const spotifyData = await getSpotifyData(); // Fetch spotify data
+
   return (
     <>
       <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -115,17 +109,16 @@ export default async function Page() {
               </div>
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <div className="profile-wrapper md:-translate-x-4 lg:-translate-x-6 xl:-translate-x-10">
-                  <Avatar className="size-28 relative z-10 border-4 border-primary/10 shadow-lg">
-                    <AvatarImage
+                  <div className="size-28 relative z-10 border-4 border-primary/10 shadow-lg rounded-full overflow-hidden">
+                    <Image
                       alt={DATA.name}
                       src={DATA.avatarUrl}
                       width={112}
                       height={112}
-                      loading="eager"
-                      className="rounded-full object-cover scale-126"
+                      priority
+                      className="object-cover scale-126"
                     />
-                    <AvatarFallback>{DATA.initials}</AvatarFallback>
-                  </Avatar>
+                  </div>
                 </div>
               </BlurFade>
             </div>
@@ -157,7 +150,7 @@ export default async function Page() {
                       icon={<social.icon className="size-full" />}
                       delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
                     />
-                  )
+                  ),
                 )}
               </div>
             </div>
@@ -182,7 +175,7 @@ export default async function Page() {
         <section id="spotify">
           <BlurFade delay={BLUR_FADE_DELAY * 9.5}>
             <h2 className="text-xl font-bold mb-4">Listening to</h2>
-            <SpotifyCard />
+            <SpotifyCard initialData={spotifyData} />
           </BlurFade>
         </section>
 
@@ -275,11 +268,11 @@ export default async function Page() {
 
               <div className="mt-6 space-y-4">
                 <a
-                  href="mailto:seekernothing@hotmail.com"
+                  href="mailto:abhishekbiradar@hotmail.com"
                   className="flex items-center gap-2 underline underline-offset-4 hover:opacity-70 transition-opacity"
                 >
                   <Icons.email className="size-4" />
-                  seekernothing@hotmail.com
+                  abhishekbiradar@hotmail.com
                 </a>
 
                 <a
@@ -313,8 +306,8 @@ export default async function Page() {
                       className="underline hover:text-foreground"
                     >
                       MIT License
-                    </a>{" "}
-                    and available on{" "}
+                    </a>
+                    , available on{" "}
                     <a
                       href="https://github.com/seekernothing/prasendev"
                       target="_blank"
@@ -322,6 +315,15 @@ export default async function Page() {
                       className="underline hover:text-foreground"
                     >
                       GitHub
+                    </a>
+                    , and{" "}
+                    <a
+                      href="https://cloud.umami.is/analytics/eu/share/UgmoNDJoNpUy3N8n?date=0week"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-foreground"
+                    >
+                      Analytics
                     </a>
                   </p>
                 </div>
