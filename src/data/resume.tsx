@@ -183,6 +183,31 @@ Exploring the intersection of code, philosophy, and human behavior.`,
   ],
   projects: [
     {
+      title: "Nevochat",
+      href: "https://nevochat-seven.vercel.app/",
+      dates: "February 2025",
+      active: true,
+      description:
+        "Chat with all open-source models at one place. Features real-time streaming, 50+ OpenRouter APIs, and secure Better Auth integration.",
+      technologies: [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL",
+        "Better Auth",
+        "Tailwind CSS",
+        "AI SDK",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://nevochat-seven.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/images/products/nevochat.png",
+      video: "",
+    },
+    {
       title: "SwipeStack",
       href: "https://swipestack.shop/",
       dates: "March 2025 - April 2025",
