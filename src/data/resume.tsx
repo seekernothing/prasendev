@@ -78,6 +78,20 @@ Exploring the intersection of code, philosophy, and human behavior.`,
 
         navbar: true,
       },
+      Substack: {
+        name: "Substack",
+        url: "https://substack.com/@seekernothing",
+        icon: Icons.substack,
+
+        navbar: true,
+      },
+      Spotify: {
+        name: "Spotify",
+        url: "https://open.spotify.com/user/g530yew5x85y1a9bc4c36w6ri?si=b786809ca8f24600",
+        icon: Icons.spotify,
+
+        navbar: true,
+      },
 
       email: {
         name: "Send Email",
