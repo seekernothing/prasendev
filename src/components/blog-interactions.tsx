@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Share2 } from 'lucide-react';
 
@@ -13,6 +13,22 @@ export function BlogInteractions({ slug }: BlogInteractionsProps) {
   const [copySuccess, setCopySuccess] = useState<string>('');
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
   const title = typeof document !== 'undefined' ? document.title : '';
+
+  // Ensure Twitter widgets load on client-side navigations
+  useEffect(() => {
+    let attempts = 0;
+    const loadTwitter = () => {
+      // @ts-ignore
+      if (window.twttr && window.twttr.widgets) {
+        // @ts-ignore
+        window.twttr.widgets.load();
+      } else if (attempts < 10) {
+        attempts++;
+        setTimeout(loadTwitter, 500);
+      }
+    };
+    loadTwitter();
+  }, [slug]);
 
   const handleShare = async () => {
     setIsSharing(true);

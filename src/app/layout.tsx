@@ -99,6 +99,12 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "p73rco1nfp");
           `}
         </Script>
+
+        {/* Instagram Embed Script */}
+        <Script async src="//www.instagram.com/embed.js" strategy="lazyOnload" />
+
+        {/* Twitter Embed Script */}
+        <Script async src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
       </head>
 
       <body className={cn(fontSans.variable, "font-sans antialiased")}>
