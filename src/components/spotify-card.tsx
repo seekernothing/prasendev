@@ -40,7 +40,11 @@ export function SpotifyCard({ initialData }: { initialData?: SpotifyData }) {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-xl">
+    <>
+      <h2 className="text-xl font-bold mb-4">
+        {data.isPlaying ? "vibing to :" : "last played : "}
+      </h2>
+      <div className="relative overflow-hidden rounded-xl">
       <BorderBeam
         duration={8}
         size={200}
@@ -82,9 +86,6 @@ export function SpotifyCard({ initialData }: { initialData?: SpotifyData }) {
           </div>
 
           <div className="flex flex-col justify-center min-w-0 flex-1">
-            <p className="text-xs font-medium text-muted-foreground mb-1">
-              {data.isPlaying ? "Now Playing" : "Last Played"}
-            </p>
             <h3 className="font-semibold text-base truncate pr-8">
               {data.title}
             </h3>
@@ -95,5 +96,6 @@ export function SpotifyCard({ initialData }: { initialData?: SpotifyData }) {
         </Link>
       </motion.div>
     </div>
+    </>
   );
 }

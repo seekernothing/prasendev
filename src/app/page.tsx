@@ -174,7 +174,6 @@ export default async function Page() {
 
         <section id="spotify">
           <BlurFade delay={BLUR_FADE_DELAY * 9.5}>
-            <h2 className="text-xl font-bold mb-4">Listening to</h2>
             <SpotifyCard initialData={spotifyData} />
           </BlurFade>
         </section>

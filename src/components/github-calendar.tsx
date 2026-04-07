@@ -1,32 +1,89 @@
 "use client";
 
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
-import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
+import HeatMap, { type SVGProps } from "@uiw/react-heat-map";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { motion } from "framer-motion";
+
+interface ContributionDay {
+  date: string;
+  count: number;
+}
 
 export function GithubContributions() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
+  const [contributions, setContributions] = React.useState<ContributionDay[]>(
+    []
+  );
+  const [total, setTotal] = React.useState(0);
+  const [loading, setLoading] = React.useState(true);
+  const [hoveredText, setHoveredText] = React.useState("");
 
   React.useEffect(() => {
-    setMounted(true);
+    fetch("/api/github/contributions")
+      .then((r) => r.json())
+      .then((data) => {
+        setContributions(
+          (data.contributions ?? []).filter(
+            (d: ContributionDay) => d.count > 0
+          )
+        );
+        setTotal(data.totalContributions ?? 0);
+        setHoveredText(
+          `${data.totalContributions} contributions in the last year`
+        );
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
-  const theme = {
-    light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-    dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-  };
+  const today = new Date();
+  const oneYearAgo = new Date();
+  oneYearAgo.setFullYear(today.getFullYear() - 1);
 
-  if (!mounted) {
+  // Calculate exact SVG width:
+  // initStartDate = previous Sunday of oneYearAgo
+  const dayOfWeek = oneYearAgo.getDay();
+  const initStart = new Date(
+    oneYearAgo.getTime() - dayOfWeek * 24 * 60 * 60 * 1000
+  );
+  const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+  const weeksNeeded =
+    Math.ceil((today.getTime() - initStart.getTime()) / msPerWeek) + 1;
+  // rectSize=14, space=4, leftPad=5 (weekLabels=false)
+  const svgWidth = weeksNeeded * (14 + 4) + 5;
+
+  const defaultText = `${total} contributions in the last year`;
+
+  const renderRect =
+    (handleMouseEnter: (text: string) => void): SVGProps["rectRender"] =>
+    (props, data) => {
+      const date = new Date(data.date);
+      const day = date.getDate();
+      const suffix =
+        day >= 11 && day <= 13
+          ? "th"
+          : (["th", "st", "nd", "rd"][day % 10] ?? "th");
+      const formattedDate =
+        date.toLocaleDateString("en-US", { day: "numeric", month: "long" }) +
+        suffix;
+      const tileInfo = `${data.count ? data.count : "No"} contributions on ${formattedDate}`;
+      return (
+        <rect
+          className="transition-all hover:brightness-125"
+          onMouseEnter={() => handleMouseEnter(tileInfo)}
+          {...props}
+        />
+      );
+    };
+
+  if (loading) {
     return (
       <div className="w-full h-[160px] rounded-xl bg-muted animate-pulse" />
     );
   }
 
   return (
-    <div className="relative overflow-hidden rounded-xl">
+    <div className="relative overflow-hidden rounded-xl mt-2">
       <BorderBeam
         duration={6}
         size={400}
@@ -39,107 +96,42 @@ export function GithubContributions() {
         className="from-transparent via-pink-500 to-transparent"
       />
       <motion.div
-        className="w-full overflow-hidden rounded-xl bg-card hover:shadow-lg transition-shadow duration-300 p-4"
+        className="w-full rounded-xl bg-card hover:shadow-lg transition-shadow duration-300 p-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="p-4 hover:scale-[1.02] transition-transform duration-300">
-          <GitHubCalendarErrorBoundary
-            username="seekernothing"
-            resolvedTheme={resolvedTheme}
+        <p className="text-sm text-muted-foreground mb-3 min-h-[20px] transition-all duration-150">
+          {hoveredText}
+        </p>
+        <div className="w-full overflow-x-auto">
+          <HeatMap
+            startDate={oneYearAgo}
+            endDate={today}
+            onMouseLeave={() => setHoveredText(defaultText)}
+            value={contributions}
+            weekLabels={false}
+            monthLabels={[
+              "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+            ]}
+            legendCellSize={0}
+            space={4}
+            style={{ color: "#9ca3af" }}
+            rectProps={{ rx: 4 }}
+            rectSize={14}
+            width={svgWidth}
+            panelColors={{
+              0: "#161b22",
+              1: "#0e4429",
+              4: "#006d32",
+              8: "#26a641",
+              12: "#39d353",
+            }}
+            rectRender={renderRect((text) => setHoveredText(text))}
           />
         </div>
       </motion.div>
     </div>
   );
-}
-
-// Simple Error Boundary wrapper that renders GitHubCalendar and falls back on error
-function GitHubCalendarErrorBoundary({
-  username,
-  resolvedTheme,
-}: {
-  username: string;
-  resolvedTheme: string | undefined;
-}) {
-  const [hasError, setHasError] = React.useState(false);
-  const [retryKey, setRetryKey] = React.useState(0);
-
-  React.useEffect(() => {
-    // Reset error state after some time to allow retries
-    const timer = setTimeout(() => {
-      if (hasError) {
-        setHasError(false);
-        setRetryKey((k) => k + 1);
-      }
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [hasError]);
-
-  React.useEffect(() => {
-    // Listen for unhandled errors in the calendar
-    const handleError = () => {
-      // eslint-disable-next-line no-console
-      console.log("GitHub Calendar: Attempting to load...");
-    };
-    window.addEventListener("error", handleError);
-    return () => window.removeEventListener("error", handleError);
-  }, []);
-
-  if (hasError) {
-    return (
-      <div className="rounded-md border border-muted p-4 text-sm bg-muted/50">
-        <div className="font-medium">GitHub Contributions</div>
-        <div className="text-muted-foreground mt-2">
-          Could not load contribution data for "{username}".
-          <br />
-          <span className="text-xs">
-            Rate limits or network issues. Check GitHub is accessible.
-          </span>
-        </div>
-        <div className="mt-3 flex gap-2">
-          <a
-            href={`https://github.com/${username}`}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm underline"
-          >
-            Open GitHub Profile
-          </a>
-          <button
-            onClick={() => {
-              setHasError(false);
-              setRetryKey((k) => k + 1);
-            }}
-            className="text-sm underline"
-          >
-            Retry
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  // Render inside try/catch using a key to re-mount on retry
-  try {
-    return (
-      <div key={retryKey}>
-        <GitHubCalendar
-          username={username}
-          colorScheme={resolvedTheme as "light" | "dark"}
-          fontSize={12}
-          blockSize={12}
-          blockMargin={4}
-        />
-      </div>
-    );
-  } catch (e) {
-    // If the library throws synchronously, catch and show fallback
-    // Log error for debugging
-    // eslint-disable-next-line no-console
-    console.error("GitHubCalendar render error:", e);
-    setHasError(true);
-    return null;
-  }
 }
