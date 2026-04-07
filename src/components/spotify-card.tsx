@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { cn } from "@/lib/utils";
 import { SpotifyData } from "@/lib/spotify";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
@@ -70,9 +71,11 @@ export function SpotifyCard({ initialData }: { initialData?: SpotifyData }) {
 
           <div className="relative flex-shrink-0">
             {data.albumImageUrl ? (
-              <img
+              <Image
                 src={data.albumImageUrl}
                 alt="Album Art"
+                width={80}
+                height={80}
                 className={cn(
                   "h-20 w-20 rounded-full object-cover shadow-md",
                   data.isPlaying && "animate-[spin_10s_linear_infinite]",

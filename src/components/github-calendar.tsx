@@ -54,6 +54,7 @@ export function GithubContributions() {
 
   const defaultText = `${total} contributions in the last year`;
 
+  /* eslint-disable react/display-name */
   const renderRect =
     (handleMouseEnter: (text: string) => void): SVGProps["rectRender"] =>
     (props, data) => {
@@ -75,6 +76,7 @@ export function GithubContributions() {
         />
       );
     };
+  /* eslint-enable react/display-name */
 
   if (loading) {
     return (
