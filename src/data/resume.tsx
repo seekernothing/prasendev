@@ -228,7 +228,7 @@ Exploring the intersection of code, philosophy, and human behavior.`,
     },
     {
       title: "SwipeStack",
-      href: "https://swipestack.shop/",
+      href: "https://swipestack.seekernothing.com/",
       dates: "March 2025 - April 2025",
       active: true,
       description:
