@@ -74,7 +74,6 @@ const getAccessToken = async (): Promise<string> => {
 };
 
 // Turns a Spotify track OR podcast episode into our simple SpotifyData shape.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const formatItem = (item: any, isPlaying: boolean): SpotifyData | null => {
   if (!item) return null;
 
