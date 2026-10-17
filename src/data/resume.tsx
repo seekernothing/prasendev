@@ -19,8 +19,7 @@ export const DATA = {
   description:
     "A software developer mainly working in the JavaScript, Python & Web3 ecosystem.",
   summary: `Curious. Always building, breaking, and learning.
-Freelancing and working across JavaScript, Python, and Web3.
-Exploring the intersection of code, philosophy, and human behavior.`,
+Freelancing and working across JavaScript, Python, and Web3.`,
 
   // point to the existing image under public/images/products/
   avatarUrl: "/images/products/musashi.jpg",
