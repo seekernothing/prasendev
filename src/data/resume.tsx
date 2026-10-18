@@ -43,7 +43,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     company: "Lightwork AI",
-    position: "Full Stack Developer",
+    position: "Frontend Developer",
     location: "Remote",
     startDate: "Mar 2026",
     endDate: "Apr 2026",
@@ -67,7 +67,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     company: "Stealth Startup",
-    position: "Full Stack Developer",
+    position: "Frontend Developer",
     location: "Remote",
     startDate: "Mar 2025",
     endDate: "Jun 2025",
