@@ -10,6 +10,74 @@ import {
 } from "lucide-react";
 import { title } from "process";
 
+export type Experience = {
+  company: string;
+  position: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  isCurrent: boolean;
+  isBlur: boolean;
+  contract?: boolean;
+  image?: string;
+  website?: string;
+  x?: string;
+  linkedin?: string;
+  github?: string;
+  technologies: string[];
+  description: string[];
+};
+
+export const EXPERIENCES: Experience[] = [
+  {
+    company: "Cooee",
+    position: "Growth",
+    location: "Baner, Pune",
+    startDate: "",
+    endDate: "",
+    isCurrent: true,
+    isBlur: false,
+    website: "https://www.letscooee.com",
+    technologies: ["Shopify", "D2C", "Growth"],
+    description: ["Helping *D2C Shopify brands* increase their revenue."],
+  },
+  {
+    company: "Lightwork AI",
+    position: "Full Stack Developer",
+    location: "Remote",
+    startDate: "Mar 2026",
+    endDate: "Apr 2026",
+    isCurrent: false,
+    isBlur: false,
+    contract: true,
+    website: "https://lightwork.co",
+    technologies: ["Next.js", "TypeScript", "Node.js", "AI API"],
+    description: [],
+  },
+  {
+    company: "Freelance",
+    position: "Full Stack Developer",
+    location: "Remote",
+    startDate: "Dec 2025",
+    endDate: "Mar 2026",
+    isCurrent: false,
+    isBlur: false,
+    technologies: ["React", "Next.js", "TypeScript", "Node.js"],
+    description: [],
+  },
+  {
+    company: "Stealth Startup",
+    position: "Full Stack Developer",
+    location: "Remote",
+    startDate: "Mar 2025",
+    endDate: "Jun 2025",
+    isCurrent: false,
+    isBlur: true,
+    technologies: ["Next.js", "TypeScript", "Node.js"],
+    description: [],
+  },
+];
+
 export const DATA = {
   name: "Abhishek Biradar",
   initials: "PN",

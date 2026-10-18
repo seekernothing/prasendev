@@ -1,6 +1,6 @@
 import { getBlogPosts } from "@/data/blog";
 import dynamic from "next/dynamic"; // Restore dynamic import
-import { DATA } from "@/data/resume"; // Re-ordered to match conventions if needed, but keeping it simple
+import { DATA, EXPERIENCES } from "@/data/resume"; // Re-ordered to match conventions if needed, but keeping it simple
 import Link from "next/link";
 import Image from "next/image"; // Added Image import
 import Markdown from "react-markdown";
@@ -21,6 +21,7 @@ import { GithubSkeleton } from "@/components/skeletons/github-skeleton";
 import { ProjectSkeleton } from "@/components/skeletons/project-skeleton";
 import { HackathonSkeleton } from "@/components/skeletons/hackathon-skeleton";
 import { GithubContributions } from "@/components/github-calendar"; // Static import
+import { ExperienceList } from "@/components/experience-list";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { GhibliSkyBackground } from "@/components/ghibli-elements";
 import { SpotifyCard } from "@/components/spotify-card";
@@ -183,6 +184,17 @@ export default async function Page() {
             <h2 className="text-xl font-bold">GitHub Contributions</h2>
             <GithubContributions />
           </BlurFade>
+        </section>
+
+        <section id="experience">
+          <div className="flex min-h-0 flex-col gap-y-4">
+            <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+              <h2 className="text-xl font-bold">Experience</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 11}>
+              <ExperienceList experiences={EXPERIENCES} />
+            </BlurFade>
+          </div>
         </section>
 
         <section id="projects">
